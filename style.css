@@ -6,12 +6,6 @@
 
 }
 
-@font-face {
-    font-family: 'PlaywriteRO';
-    src: url('fonts/PlaywriteRO/f614ed79-b5f8-4ed6-9eb9-63307cc1b235.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
 
 
 body {
@@ -184,7 +178,7 @@ main {
 
 .texte-accueil h1 {
     font-family: 'schoolbell';
-    font-size: clamp(1.5rem, 4vw, 3rem);
+    font-size: clamp(2rem, 6vw, 4rem);
 
     color: #000000;
 

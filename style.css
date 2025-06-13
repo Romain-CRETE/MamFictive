@@ -183,7 +183,7 @@ main {
 }
 
 .texte-accueil h1 {
-
+    font-family: 'schoolbell';
     font-size: clamp(1.5rem, 4vw, 3rem);
 
     color: #000000;
@@ -194,7 +194,7 @@ main {
 }
 
 .texte-accueil p {
-
+    font-family: 'schoolbell';
     font-size: clamp(1rem, 2.5vw, 2rem);
     margin: 10px 0 0 0;
 

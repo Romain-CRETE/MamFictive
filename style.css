@@ -1,0 +1,367 @@
+@font-face {
+    font-family: 'schoolbell';
+    src: url('fonts/Schoolbell/Schoolbell-Regular.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'PlaywriteRO';
+    src: url('fonts/PlaywriteRO/f614ed79-b5f8-4ed6-9eb9-63307cc1b235.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-image: url('img/arriere_plan.jpg');
+
+    background-position: center;
+
+    background-size: cover;
+
+    background-attachment: fixed;
+
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(30, 30, 47, 0.6);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+}
+
+
+
+nav ul {
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 40px;
+
+    flex-wrap: wrap;
+
+}
+
+
+
+
+/* Liens du menu */
+nav ul li a {
+    font-family: 'schoolbell', sans-serif;
+
+    text-decoration: none;
+    color: #f5f5f5;
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    font-size: 30px;
+    text-transform: uppercase;
+
+    padding: 8px 12px;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+/* Effet au survol */
+nav ul li a:hover {
+    color: #0072f5;
+
+}
+
+@media (max-width: 200px) {
+    nav {
+        display: none;
+    }
+}
+
+/* Pour aligner le logo verticalement dans la barre */
+nav ul li.logo-menu {
+    display: flex;
+    align-items: center;
+}
+
+/* Taille du logo  */
+nav ul li.logo-menu img.logo {
+    height: 50px;
+
+    width: auto;
+
+}
+
+/* Afficher le burger en version mobile */
+@media (max-width: 1310px) {
+
+
+    .burger {
+        display: block;
+        font-size: 32px;
+        cursor: pointer;
+        color: white;
+        padding: 10px 20px;
+        z-index: 1001;
+    }
+
+
+
+    .nav-links {
+        position: absolute;
+        top: 60px;
+
+        left: 0;
+        right: 0;
+        background-color: rgba(30, 30, 47, 0.95);
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.4s ease, opacity 0.4s ease;
+    }
+
+    .nav-links.active {
+        max-height: 500px;
+        opacity: 1;
+        padding: 20px 0;
+    }
+}
+
+
+main {
+    padding-top: calc(60px + 2em);
+}
+
+/*acceuil*/
+.cadre-image-fond {
+
+    position: relative;
+    width: 90%;
+    height: 250px;
+    margin: 30px auto;
+    border-radius: 30px;
+
+    background-image: url('img/trace_sable_horiz_opa_0.6.jpg');
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+
+.texte-accueil {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    width: 100%;
+    max-width: 80%;
+}
+
+.texte-accueil h1 {
+
+    font-size: clamp(1.5rem, 4vw, 3rem);
+
+    color: #000000;
+
+    margin: 0;
+    line-height: 1.2;
+    word-wrap: break-word;
+}
+
+.texte-accueil p {
+
+    font-size: clamp(1rem, 2.5vw, 2rem);
+    margin: 10px 0 0 0;
+
+    color: #000000;
+    word-wrap: break-word;
+
+
+}
+
+
+
+.section-style {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px 30px;
+    background-color: rgba(255, 255, 245, 0.6);
+    border-radius: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    color: #181818;
+    text-align: center;
+}
+
+
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.bloc-style {
+    background-color: rgba(245, 245, 235, 0.5);
+    padding: 2px 30px 20px 30px;
+
+    border-radius: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin: 30px auto;
+    max-width: 900px;
+}
+
+
+
+h2 {
+    font-family: 'schoolbell', cursive;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+
+
+h3 {
+    font-family: 'schoolbell', cursive;
+    font-size: 1.8rem;
+    color: #000000;
+    margin-bottom: 15px;
+
+}
+
+
+
+/* Style pour le carousel */
+.caroustyle {
+    position: relative;
+    max-width: 900px;
+    height: 160px;
+
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.caroustyle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.caroustyle img.active {
+    opacity: 1;
+
+    z-index: 1;
+}
+
+
+
+
+
+
+
+
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    flex-direction: column;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 12px;
+    box-shadow: 0 0 15px #fff;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 3rem;
+    color: white;
+    cursor: pointer;
+}
+
+.nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+}
+
+.nav.left {
+    left: 10px;
+
+}
+
+.nav.right {
+    right: 10px;
+
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
